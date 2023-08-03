@@ -15,6 +15,8 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.baseUrl = System.getProperty("productUrl");
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.remote = "https://user1:1234@" + System.getProperty("remoteDriverUrl") + "/wd/hub";
